@@ -17,6 +17,6 @@ CREATE TABLE `user_detail`
   unique `idx_nickname` (`mobile`),
   unique `idx_real_name` (`email`),
   index `idx_create_time` (`create_time`),
-  index `idx_update_time` (`update_time`)
+  index `idx_update_time` (`update_time`),
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
