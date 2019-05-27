@@ -17,6 +17,13 @@ public class Userdetail {
 
     private Date updateTime;
 
+    public Userdetail(String openid){
+        this.setOpenid(openid);
+        this.setEmailVerified(false);
+        this.setMobileVerified(false);
+        this.setCreateTime(new Date());
+    }
+
     public String getOpenid() {
         return openid;
     }
