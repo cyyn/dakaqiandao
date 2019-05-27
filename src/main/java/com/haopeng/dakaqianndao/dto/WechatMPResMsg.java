@@ -3,7 +3,7 @@ package com.haopeng.dakaqianndao.dto;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlCData;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
-import io.haopeng.dakaqiandao.constant.WechatConstant;
+import com.haopeng.dakaqianndao.constant.WechatConstant;
 
 import java.util.Date;
 
