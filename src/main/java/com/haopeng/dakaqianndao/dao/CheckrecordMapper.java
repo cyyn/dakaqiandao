@@ -14,4 +14,6 @@ public interface CheckrecordMapper {
     int updateByPrimaryKeySelective(Checkrecord record);
 
     int updateByPrimaryKey(Checkrecord record);
+
+    void deleteByOpenid(String openid);
 }
