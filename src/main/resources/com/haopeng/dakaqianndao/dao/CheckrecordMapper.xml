@@ -20,12 +20,19 @@
     delete from check_record
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.haopeng.dakaqianndao.po.Checkrecord">
-    insert into check_record (id, openid, type, 
+
+  <insert id="insert" parameterType="com.haopeng.dakaqianndao.po.Checkrecord" useGeneratedKeys="true" keyProperty="id">
+    insert into check_record (openid, type,
       time)
-    values (#{id,jdbcType=INTEGER}, #{openid,jdbcType=VARCHAR}, #{type,jdbcType=TINYINT}, 
+    values (#{openid,jdbcType=VARCHAR}, #{type,jdbcType=TINYINT},
       #{time,jdbcType=TIMESTAMP})
   </insert>
+
+  <delete id="deleteByOpenid" parameterType="java.lang.String">
+    delete from check_record
+    where openid = #{openid,jdbcType=VARCHAR}
+  </delete>
+
   <insert id="insertSelective" parameterType="com.haopeng.dakaqianndao.po.Checkrecord">
     insert into check_record
     <trim prefix="(" suffix=")" suffixOverrides=",">

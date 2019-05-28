@@ -18,10 +18,12 @@
     from user
     where openid = #{openid,jdbcType=VARCHAR}
   </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from user
     where openid = #{openid,jdbcType=VARCHAR}
   </delete>
+
   <insert id="insert" parameterType="com.haopeng.dakaqianndao.po.User">
     insert into user (openid, nickname, real_name, 
       gender, avatar_url, status
@@ -30,6 +32,7 @@
       #{gender,jdbcType=TINYINT}, #{avatarUrl,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT}
       )
   </insert>
+
   <insert id="insertSelective" parameterType="com.haopeng.dakaqianndao.po.User">
     insert into user
     <trim prefix="(" suffix=")" suffixOverrides=",">

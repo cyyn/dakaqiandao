@@ -19,10 +19,12 @@
     from user_detail
     where openid = #{openid,jdbcType=VARCHAR}
   </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from user_detail
     where openid = #{openid,jdbcType=VARCHAR}
   </delete>
+
   <insert id="insert" parameterType="com.haopeng.dakaqianndao.po.Userdetail">
     insert into user_detail (openid, mobile, mobile_verified, 
       email, email_verified, create_time, 
@@ -31,6 +33,7 @@
       #{email,jdbcType=VARCHAR}, #{emailVerified,jdbcType=BIT}, #{createTime,jdbcType=TIMESTAMP}, 
       #{updateTime,jdbcType=TIMESTAMP})
   </insert>
+
   <insert id="insertSelective" parameterType="com.haopeng.dakaqianndao.po.Userdetail">
     insert into user_detail
     <trim prefix="(" suffix=")" suffixOverrides=",">
