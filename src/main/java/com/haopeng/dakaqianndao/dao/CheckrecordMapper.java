@@ -1,6 +1,7 @@
 package com.haopeng.dakaqianndao.dao;
 
 import com.haopeng.dakaqianndao.po.Checkrecord;
+import org.apache.ibatis.annotations.Param;
 
 public interface CheckrecordMapper {
     int deleteByPrimaryKey(Integer id);
@@ -15,5 +16,6 @@ public interface CheckrecordMapper {
 
     int updateByPrimaryKey(Checkrecord record);
 
-    void deleteByOpenid(String openid);
+//    custom api
+    int deleteByOpenid(@Param("openid")String openid);
 }
