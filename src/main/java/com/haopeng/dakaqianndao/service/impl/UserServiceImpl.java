@@ -64,7 +64,6 @@ public class UserServiceImpl implements UserService {
         userdetailMapper.insert(userDetail);
     }
 
-
     @Override
     @Transactional
     public void delete(String openid) {

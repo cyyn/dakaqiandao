@@ -4,7 +4,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(HttpStatus.BAD_REQUEST)
-public class ClientException extends Exception {
+public class ClientException extends Exception{
+
     private String openid;
 
     private String errCode;
